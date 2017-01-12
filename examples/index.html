@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>mask examples</title>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/class/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/overlay/index.css" />
+    <script src="../bower_components/overlay/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../index.css" />
+    <script src="../index.js"></script>
+    <style>
+    table{
+        margin: 30px;
+        border-collapse: collapse;
+        border: 1px solid #333;
+    }
+
+    table tr{
+        border-top: 1px solid #333;
+        border-left: 1px solid #333;
+    }
+
+    table td{
+        padding: 5px;
+        border-right: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+    </style>
+</head>
+
+<body>
+<table>
+    <tr>
+        <td><a href="javascript:void(0);" id="tooltip-left-top" data-tooltip="<span>fuck you !</span>">hover me</a></td>
+        <td><a href="javascript:void(0);" id="tooltip-top" data-tooltip="<span>fuck you !</span>">hover me</a></td>
+        <td><a href="javascript:void(0);" id="tooltip-right-top" data-tooltip="<span>fuck you !</span>">hover me</a></td>
+    </tr>
+    <tr>
+        <td><a href="javascript:void(0);" id="tooltip-left" data-tooltip="<span>fuck you !</span>">hover me</a></td>
+        <td> </td>
+        <td><a href="javascript:void(0);" id="tooltip-right" data-tooltip="<span>fuck you !</span>">hover me</a></td>
+    </tr>
+    <tr>
+        <td><a href="javascript:void(0);" id="tooltip-bottom-left" data-tooltip="<span>fuck you !</span>">hover me</a></td>
+        <td><a href="javascript:void(0);" id="tooltip-bottom" data-tooltip="<span>fuck you !</span>">hover me</a></td>
+        <td><a href="javascript:void(0);" id="tooltip-bottom-right" data-tooltip="<span>fuck you !</span>">hover me</a></td>
+    </tr>
+</table>
+
+<script>
+    var COLORS = ['red', 'orange', 'gray', 'black'];
+
+    $('[id^=tooltip-]').each(function(index){
+        $(this).tooltip({
+            theme: COLORS[index % COLORS.length],
+            pos: this.id.replace('tooltip-', '')
+        });
+    });
+</script>
+</body>
+</html>
