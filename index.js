@@ -37,9 +37,7 @@ var Tooltip = Class.$factory('tooltip', {
         self.$overlay = new Overlay({
             className: 'ui3-tooltip ui3-tooltip-theme-' + options.theme + ' ' + options.className,
             content: '<div class="ui3-tooltip-content"></div><i class="ui3-tooltip-arrow"></i>',
-            autoOpen: false,
-            width: 'auto',
-            height: 'auto'
+            autoOpen: false
         });
 
         var content = options.content;
@@ -81,7 +79,7 @@ var Tooltip = Class.$factory('tooltip', {
 
     hide: function(){
         this.$overlay.hide();
-        self.trigger('hide');
+        this.trigger('hide');
     },
 
     toggle: function(){
