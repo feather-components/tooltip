@@ -1,7 +1,7 @@
 ;(function(factory){
 if(typeof define == 'function' && define.amd){
     //seajs or requirejs environment
-    define(['jQuery', 'class', 'overlay'], factory);
+    define(['jquery', 'class', 'overlay'], factory);
 }else if(typeof module === 'object' && typeof module.exports == 'object'){
     module.exports = factory(
         require('jquery'),
