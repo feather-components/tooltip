@@ -5,6 +5,7 @@
     position: absolute;
     z-index: 100000;
     border-radius: 3px;
+    overflow: visible;
 }
 
 .ui3-tooltip .ui3-tooltip-arrow{
