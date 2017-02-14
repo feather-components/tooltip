@@ -73,7 +73,7 @@ var Tooltip = Class.$factory('tooltip', {
     show: function(){
         var self = this;
 
-        self.$overlay.$.appendTo(document.body);
+        self.$overlay.$.appendTo(document.body).show();
         self.setPos();
         self.trigger('show');
     },
