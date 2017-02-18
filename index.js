@@ -48,6 +48,7 @@ var Tooltip = Class.$factory('tooltip', {
         }
 
         self.setContent(content);
+        self.hide();
         self.initEvent();
     },
 
@@ -72,6 +73,7 @@ var Tooltip = Class.$factory('tooltip', {
     show: function(){
         var self = this;
 
+        self.$overlay.$.appendTo(document.body);
         self.$overlay.open();
         self.setPos();
         self.trigger('show');
@@ -79,6 +81,7 @@ var Tooltip = Class.$factory('tooltip', {
 
     hide: function(){
         this.$overlay.close();
+        this.$overlay.$.detach();
         this.trigger('hide');
     },
 
