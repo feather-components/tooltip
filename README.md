@@ -1,7 +1,7 @@
 Tooltip (工具气泡组件)
 ==============================
 
-###Options
+### Options
 
 * dom：需绑定的元素
 
@@ -19,7 +19,7 @@ Tooltip (工具气泡组件)
 
 * className: 指定一个classname，可自定义自己的样式
 
-###Api
+### Api
 
 * setContent(content): 动态设置一个content
 
@@ -33,7 +33,7 @@ Tooltip (工具气泡组件)
 
 * destroy()：删除tooltip
 
-###Example
+### Example
 
 ```js
 $('#tooltip').tooltip({
